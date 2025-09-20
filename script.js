@@ -1,9 +1,12 @@
-function getFormvalue() {
+function getFormvalue(event) {
+	event.preventDefault();
     //Write your code here
-	let fname = document.getElementById("fn").value;
-	let lname = document.getElementById("ln").value;
-
-	alert(`${fname} ${lname}`);
+	const form = document.getElementById('form1');
+  const firstName = form.fname.value.trim(); // Get the first name and trim spaces
+  const lastName = form.lname.value.trim(); // Get the last name and trim spaces
+  
+  // Display the full name
+  alert(`${firstName} ${lastName}`);
 
 }
-document.getElementById('submit').addEventListener('click', getFormvalue);
+
